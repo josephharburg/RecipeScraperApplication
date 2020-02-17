@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "Recipe";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model ScraperModel
+
+<h1 class="display-3 text-dark">@Model.Title</h1>
+<h1>Ingredients</h1>
+@foreach(var item in Model.Ingredients)
+{
+    <div>@item</div>
+}
+<h1>Instructions</h1>
+
+@foreach(var item in Model.Instructions)
+{
+    <div>@item</div>
+}
+
+
